@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Literature",
+    "content": "The Seven Deadly Sins have been featured in liturature over centuraies. Three of the most well known books are The Divine Comedy by Dante Algherio, The Canterbury Tales by Geoffrey Chaucer, and The Faerie Queene.",
+    "books": [{
+      "book": [{
+        "title": "The Divine Comedy",
+        "info": "The Divine Comedy is widely considered the central epic poem of Italian literature. The poem’s imaginative and allegorical vision of the Christian afterlife is a culmunation of the medieval world-view as it had developed in the Western Church. It helped establish the Tuscan dialect in which it is written as the Italian standard.",
+        "img": "/assets/img/img.jpg"
+        }],
+        "book": [{
+          "title": "The Canterbury Tales",
+          "info": "",
+          "img": "/assets/img/img.jpg"
+          }],
+        "book": [{
+          "title": "The Faerie Queene",
+          "info": "",
+          "img": "/assets/img/img.jpg"
+          }]
+      }]
+  }
+]

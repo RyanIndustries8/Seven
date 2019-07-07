@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "content": [
+      {
+      "sin": "Vanity",
+      "card": "/assets/img/vanity.jpg",
+      "icon": "/assets/img/vanityIcon.jpg",
+      "info": "In almost every list pride (or hubris or vanity) is considered the original and most serious of the seven deadly sins, and indeed the ultimate source from which the others arise. It is identified as a desire to be more important or attractive than others, failing to acknowledge the good work of others, and excessive love of self (especially holding self out of proper position toward God). Dante's definition was 'love of self perverted to hatred and contempt for one's neighbor.' In Jacob Bidermann's medieval miracle play, Cenodoxus, pride is the deadliest of all the sins and leads directly to the damnation of the titulary famed Parisian doctor. In perhaps the best-known example, the story of Lucifer, pride (his desire to compete with God) was what caused his fall from Heaven, and his resultant transformation into Satan. Vanity and narcissism are prime examples of this sin. In Dante's Divine Comedy, the penitents were forced to walk with stone slabs bearing down on their backs in order to induce feelings of humility."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "content": [
+      {
+      "sin": "Envy",
+      "card": "/assets/img/envy.jpg",
+      "icon": "/assets/img/envyIcon.jpg",
+      "info": "Like greed, envy may be characterized by an insatiable desire; they differ, however, for two main reasons. First, greed is largely associated with material goods, whereas envy may apply more generally. Second, those who commit the sin of envy resent that another person has something they perceive themselves as lacking, and wish the other person to be deprived of it. Dante defined this as 'love of one's own good perverted to a desire to deprive other men of theirs.' In Dante's Purgatory, the punishment for the envious is to have their eyes sewn shut with wire because they have gained sinful pleasure from seeing others brought low. Aquinas described envy as 'sorrow for another's good'."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "content": [
+      {
+      "sin": "Sloth",
+      "card": "/assets/img/sloth.jpg",
+      "icon": "/assets/img/slothIcon.jpg",
+      "info": "More than other sins, the definition of sloth has changed considerably since its original inclusion among the seven deadly sins. In fact it was first called the sin of sadness or despair. It had been in the early years of Christianity characterized by what modern writers would now describe as melancholy: apathy, depression, and joylessness — the last being viewed as being a refusal to enjoy the goodness of God and the world God created. Originally, its place was fulfilled by two other aspects, acedia and sadness. The former described a spiritual apathy that affected the faithful by discouraging them from their religious work. Sadness (tristitia in Latin) described a feeling of dissatisfaction or discontent, which caused unhappiness with one's current situation. When Thomas Aquinas selected acedia for his list, he described it as an 'uneasiness of the mind', being a progenitor for lesser sins such as restlessness and instability. Dante refined this definition further, describing sloth as being the 'failure to love God with all one's heart, all one's mind and all one's soul.' He also described it as the middle sin, and as such was the only sin characterised by an absence or insufficiency of love. In his 'Purgatorio', the slothful penitents were made to run continuously at top speed."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "content": [
+      {
+      "sin": "Wrath",
+      "card": "/assets/img/wrath.jpg",
+      "icon": "/assets/img/wrathIcon.jpg",
+      "info": "Wrath (or anger or 'Rage') may be described as inordinate and uncontrolled feelings of hatred and anger. These feelings can manifest as vehement denial of the truth, both to others and in the form of self-denial, impatience with the procedure of law, and the desire to seek revenge outside of the workings of the justice system (such as engaging in vigilantism) and generally wishing to do evil or harm to others. The transgressions borne of vengeance are among the most serious, including murder, assault, and in extreme cases, genocide. Wrath is the only sin not necessarily associated with selfishness or self-interest (although one can of course be wrathful for selfish reasons, such as jealousy, closely related to the sin of envy). Dante described vengeance as 'love of justice perverted to revenge and spite'. In its original form, the sin of wrath also encompassed anger pointed internally rather than externally. Thus suicide was deemed as the ultimate, albeit tragic, expression of wrath directed inwardly, a final rejection of God's gifts."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "content": [
+      {
+      "sin": "Lust",
+      "card": "/assets/img/lust.jpg",
+      "icon": "/assets/img/lustIcon.jpg",
+      "info": "Lust (or lechery) is usually thought of as excessive thoughts or desires of a sexual nature. Giving in to lusts can lead to sexual or sociological compulsions and/or transgressions including (but not limited to) sexual addiction, fornication, adultery, bestiality, rape, perversion, and incest. Dante's criterion was 'excessive love of others', which therefore rendered love and devotion to God as secondary. In 'Purgatorio', the penitent walks within flames to purge himself of lustful/sexual thoughts and feelings."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "content": [
+      {
+      "sin": "Gluttony",
+      "card": "/assets/img/gluttony.jpg",
+      "icon": "/assets/img/gluttonyIcon.jpg",
+      "info": "Derived from the Latin gluttire, meaning to gulp down or swallow, gluttony is the over-indulgence and over-consumption of anything to the point of waste. In the Christian religions, it is considered a sin because of the excessive desire for food, or its withholding from the needy. Depending on the culture, it can be seen as either a vice or a sign of status. Where food is relatively scarce, being able to eat well might be something to take pride in (although this can also result in a moral backlash when confronted with the reality of those less fortunate). Where food is routinely plentiful, it may be considered a sign of self-control to resist the temptation to over-indulge."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "content": [
+      {
+      "sin": "Greed",
+      "card": "/assets/img/greed.jpg",
+      "icon": "/assets/img/greedIcon.jpg",
+      "info": "Greed (or avarice, covetousness) is, like lust and gluttony, a sin of excess. However, greed (as seen by the church) is applied to the acquisition of wealth in particular. St. Thomas Aquinas wrote that greed was 'a sin against God, just as all mortal sins, in as much as man condemns things eternal for the sake of temporal things.'' In Dante's Purgatory, the penitents were bound and laid face down on the ground for having concentrated too much on earthly thoughts. 'Avarice' is more of a blanket term that can describe many other examples of greedy behavior. These include disloyalty, deliberate betrayal, or treason,[citations needed] especially for personal gain, for example through bribery . Scavenging[citation needed] and hoarding of materials or objects, theft and robbery, especially by means of violence, trickery, or manipulation of authority are all actions that may be inspired by greed. Such misdeeds can include simony, where one profits from soliciting goods within the actual confines of a church."
+      }
+    ]
+  }
+]

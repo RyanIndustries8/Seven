@@ -1,0 +1,73 @@
+.table {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  height: 360px;
+  transition: 1.5s;
+  position: absolute;
+}
+
+.card:hover {
+  height: 380px;
+  transition: .5s;
+  z-index: 9;
+  transform: rotate(0deg) !important;
+  cursor: pointer;
+}
+
+header {
+  width: calc(100% - 80px);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 99;
+}
+
+.mask {
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.75);
+  position: absolute;
+  display: flex;
+  z-index: 9;
+}
+
+.flexCentered {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  align-self: center;
+}
+
+.title ul {
+  margin-top: 60px;
+}
+
+.title ul li {
+  line-height: 44px;
+}
+
+.title ul li:hover {
+  color:
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul.credits {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
