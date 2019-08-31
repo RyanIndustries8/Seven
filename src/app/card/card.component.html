@@ -19,20 +19,6 @@
     <h4 *ngIf="menuOpen">Seven Deadly Sins</h4>
     <div *ngIf="menuOpen" (click)="toggleMenu()"><a>MENU</a></div>
   </header>
-  <!-- <div #sins class="mask" *ngIf="sins" [@clickevent]>
-    <div class="card" *ngFor="let cards of sins">
-      <p>{{sins.info}}</p>
-    </div>
-    <div class="allCards"  *ngFor="let sins of thumbs">
-      <span>{{thumbs.sin}}</span>
-    </div>
-  </div> -->
-  <div class="table">
-    <div class="cardsLayedOut" *ngFor="let sublist of jo.content">
-      <img class="card" [ngStyle]="rotateCards()" *ngFor="" [src]="sublist[card]" (click)="viewSin()" />
-    </div>
-
-  </div>
   <div #arts class="mask" *ngIf="arts" [@clickevent]>
     <div class="contentContainer">
       <h3>Inspired Arts</h3>
@@ -45,10 +31,14 @@
       <p>The Seven Deadly Sins never occur as a formal list in the Bible. Some people say they can all  The Divine Comedybe found in Matthew's Gospel (chapters 5 through 7), but they are not in a simple list there. Others submit Proverbs 6:16-19, but this is a different list, covering pride, lies, murder, evil plans, swiftness in sin, lies again, causing conflict. Clearly not the same. These sins were identified as a group around the same time as the Bible was being translated into a single language. Rather than these sins being identified in a single place in the Bible, they are found all through it, from Genesis to Revelation. The letters of the New Testament mention all of these, and many others as well. The Catechism has many Scriptural references in the section that lists the "Seven Deadly Sins." It is well to remember that the Scriptures come from the Jewish and Christian Churches, not the other way around. In both cases, faith preceded the writing.</p>
     </div>
   </div>
-  <div class="cardMask" *ngIf="sins" [@clickevent]>
-    <p *ngFor="let sublist of jo.content">{{sublist.info}}</p>
-    <div class="allCards">
-      <!-- <div class="thumbnails"><img *ngFor="let sublist of cards.content" class="icon" [src]="cards?.icon" /><span>{{cards.sin}}</span></div> -->
+  <div class="table">
+    <div class="" *ngIf="sins">
+      <app-sins></app-sins>
+    </div>
+    <div class="cardsLayedOut" *ngFor="let jo of cards">
+      <a [routerLink]="['/sins', sins.id]"><img class="card" [ngStyle]="rotateCards()" *ngFor="let sublist of jo.content" [src]="sublist.card" /></a>
+
     </div>
   </div>
+
 </div>

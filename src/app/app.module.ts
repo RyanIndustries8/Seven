@@ -7,11 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
+import { SinsComponent } from './sins/sins.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
+    SinsComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

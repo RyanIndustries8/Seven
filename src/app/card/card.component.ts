@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { trigger, style, animate, transition } from '@angular/animations';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
-export class Sin {
-  id: number;
-  sin: string;
-  card: string;
-  icon: string;
-  info: string;
-}
+// export class Sin {
+//   id: number;
+//   sin: string;
+//   card: string;
+//   icon: string;
+//   info: string;
+// }
 
 @Component({
   selector: 'app-card',
@@ -36,7 +39,11 @@ export class CardComponent implements OnInit {
 
   cards: any;
 
-  constructor(private http: HttpClient) { }
+  constructor( private route: ActivatedRoute, private router: Router, private http: HttpClient, public sanitizer: DomSanitizer ) {
+    this.sanitizer = sanitizer;
+
+    this.route.params.subscribe(params => {this.cards = params['id']; });
+  }
 
   ngOnInit(): void {
 
@@ -71,9 +78,6 @@ export class CardComponent implements OnInit {
 
     return styles;
 
-    // this.style.left = randWidth + 'px';
-    // this.style.top = randHeight + 'px';
-    // this.cards.style.transform = 'rotate(' + randRotation + 'deg)';
   }
 
 
@@ -104,14 +108,9 @@ export class CardComponent implements OnInit {
 
   viewSin() {
     this.sins = true;
-    // const styles = {
-    //   left: 200 + 'px',
-    //   top: 20 + '%',
-    //   transform: 'rotate(' + 90 + 'deg)',
-    //   position: 'absolute'
-    // };
-
-    return styles;
+    // return this.route.snapshot.paramMap.get('id');
+    // console.log(id);
+    // return this.route.paramMap.subscribe(params => {this.cards = params['id'];});
   }
 
 }

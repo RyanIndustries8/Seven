@@ -1,0 +1,11 @@
+<div class="cardMask" *ngFor="let jo of cards">
+  <p style="color: red">sayWhat?</p>
+  <div class="" *ngFor="let sublist of jo.content">
+    <img class="card" [src]="sublist.card" />
+
+    <div class="allCards">
+      <div class="thumbnails"><img class="icon" [src]="sublist.icon" /><span>{{sublist.sin}}</span></div>
+    </div>
+  </div>
+</div>
+<h1>What ever!</h1>
