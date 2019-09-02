@@ -2,22 +2,22 @@
   {
     "title": "Literature",
     "content": "The Seven Deadly Sins have been featured in liturature over centuraies. Three of the most well known books are The Divine Comedy by Dante Algherio, The Canterbury Tales by Geoffrey Chaucer, and The Faerie Queene.",
-    "books": [{
-      "book": [{
+    "books": [
+      {
         "title": "The Divine Comedy",
         "info": "The Divine Comedy is widely considered the central epic poem of Italian literature. The poem’s imaginative and allegorical vision of the Christian afterlife is a culmunation of the medieval world-view as it had developed in the Western Church. It helped establish the Tuscan dialect in which it is written as the Italian standard.",
-        "img": "/assets/img/img.jpg"
-        }],
-        "book": [{
-          "title": "The Canterbury Tales",
-          "info": "",
-          "img": "/assets/img/img.jpg"
-          }],
-        "book": [{
-          "title": "The Faerie Queene",
-          "info": "",
-          "img": "/assets/img/img.jpg"
-          }]
-      }]
+        "img": "/assets/img/divine.png"
+      },
+      {
+        "title": "The Canterbury Tales",
+        "info": "Beyond its importance as a cultural touchstone and literary work of unvarnished genius, Chaucer’s unfinished epic poem is also one of the most beloved works in the English language-in vivid group portrait that capures the full spectrum of late-medieval English society and both informs and expands our discourse on the human condition.",
+        "img": "/assets/img/canter.png"
+      },
+      {
+        "title": "The Faerie Queene",
+        "info": "The Faerie Queene was the first epic in Englsh and one of the most influential poems in the language for later poets from Milton to Tennyson. Dedicating his work to Elizabeth I, Spencer brilliantly united medieval romance and renaissance epic to expound the glory or the Virgin Queen.",
+        "img": "/assets/img/queene.png"
+      }
+    ]
   }
 ]

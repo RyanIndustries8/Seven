@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { SinsComponent } from './sins/sins.component';
 import { SafePipe } from './safe.pipe';
+import { ThumnailComponent } from './thumnail/thumnail.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SafePipe } from './safe.pipe';
     CardComponent,
     SinsComponent,
     SafePipe,
+    ThumnailComponent,
   ],
   imports: [
     BrowserModule,

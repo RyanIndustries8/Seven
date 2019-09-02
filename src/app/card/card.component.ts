@@ -5,13 +5,6 @@ import { trigger, style, animate, transition } from '@angular/animations';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 
-// export class Sin {
-//   id: number;
-//   sin: string;
-//   card: string;
-//   icon: string;
-//   info: string;
-// }
 
 @Component({
   selector: 'app-card',
@@ -30,6 +23,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
+
 export class CardComponent implements OnInit {
   menu = true;
   arts = false;
@@ -37,20 +31,33 @@ export class CardComponent implements OnInit {
   history = false;
   sins = false;
 
-  cards: any;
+  modelwork: any;
+  his: any;
+  liturature: any;
 
   constructor( private route: ActivatedRoute, private router: Router, private http: HttpClient, public sanitizer: DomSanitizer ) {
     this.sanitizer = sanitizer;
-
-    this.route.params.subscribe(params => {this.cards = params['id']; });
   }
 
   ngOnInit(): void {
 
+    // Cards
     this.http.get<any>('./assets/json/cards.json').subscribe(
       data => {
-        this.cards = data;
-    });
+        this.modelwork = data;
+    })
+
+    // History
+    this.http.get<any>('./assets/json/history.json').subscribe(
+      data => {
+        this.his = data;
+    })
+
+    // Liturature
+    this.http.get<any>('./assets/json/lit.json').subscribe(
+      data => {
+        this.liturature = data;
+    })
 
   }
 
@@ -97,7 +104,7 @@ export class CardComponent implements OnInit {
   toggleHistory() {
     this.menuOpen = true;
     this.menu = false;
-    this.history = !this.history;
+    this.history = true;
   }
 
   toggleArts() {
@@ -108,9 +115,6 @@ export class CardComponent implements OnInit {
 
   viewSin() {
     this.sins = true;
-    // return this.route.snapshot.paramMap.get('id');
-    // console.log(id);
-    // return this.route.paramMap.subscribe(params => {this.cards = params['id'];});
   }
 
 }

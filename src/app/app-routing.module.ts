@@ -5,22 +5,22 @@ import { SinsComponent } from './sins/sins.component';
 
 const routes: Routes = [
   {
-    path: 'sins',
+    path: 'cards',
     component: CardComponent
   },
   {
-    path: 'sins/:id',
+    path: 'sin/:id',
     component: SinsComponent
   },
   {
     path: '',
-    redirectTo: 'sins',
+    redirectTo: '/cards',
     pathMatch: 'full'
   },
-  // {
-  //   path: '**',
-  //   component: CardComponent
-  // }
+  {
+    path: '**',
+    component: CardComponent
+  }
 ];
 
 @NgModule({

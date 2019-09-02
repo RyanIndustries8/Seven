@@ -6,27 +6,22 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-sins',
-  templateUrl: './sins.component.html',
-  styleUrls: ['./sins.component.css']
+  selector: 'app-thumnail',
+  templateUrl: './thumnail.component.html',
+  styleUrls: ['./thumnail.component.css']
 })
-export class SinsComponent implements OnInit {
-
-  chosenIndex: any;
-  modelwork: any;
-
+export class ThumnailComponent implements OnInit {
 
   constructor( private route: ActivatedRoute, private router: Router, private http: HttpClient, public sanitizer: DomSanitizer ) {
     this.sanitizer = sanitizer;
- }
+  }
 
-  public ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.chosenIndex = params['id'];
+  modelwork: any;
 
-      this.http.get<any>('./assets/json/cards.json').subscribe(data => {
-        this.modelwork = data.filter(d => d['id'] == this.chosenIndex);
-      })
+  ngOnInit() {
+    this.http.get<any>('./assets/json/cards.json').subscribe(
+      data => {
+        this.modelwork = data;
     });
   }
 

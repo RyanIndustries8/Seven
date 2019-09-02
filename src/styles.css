@@ -1,3 +1,4 @@
+/* FONTS */
 @font-face {
 	font-family: "Trajan";
 	src: url('assets/fonts/Trajan-Pro-Regular/TrajanProRegular.ttf');
@@ -26,6 +27,7 @@ h1 {
 
 h2 {
   font-size: 56px;
+	margin-bottom: 60px;
 }
 
 h3 {
@@ -34,6 +36,7 @@ h3 {
 
 h4 {
   font-size: 25px;
+	line-height: 44px;
 }
 
 h5 {
@@ -49,6 +52,11 @@ p {
   font-size: 16px;
 }
 
+p:last-child {
+	margin-bottom: 40px;
+}
+
+/* GLOBAL */
 html,
 body {
   margin: 0;
@@ -64,19 +72,10 @@ body {
   top: 0;
 }
 
-:host {
-	display: block;
-}
-
-[hidden]:not([broken]) {
-	display: none !important;
-}
-
 a {
   color: rgb(255,255,255);
 	transition: 1s;
 	cursor: pointer;
-
 }
 
 a:hover,
@@ -89,17 +88,143 @@ a.highlightLink:hover {
   text-decoration: underline;
 }
 
-ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+header {
+  width: calc(100% - 80px);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 99;
 }
 
-.thumbnails {
-	/* display: flex;
+/* LAYOUT */
+.mask {
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.75);
+  position: absolute;
+  display: flex;
+  z-index: 9;
+}
+
+.columnCentered {
+	height: calc(100% - 130px);
+  flex-direction: column;
+  align-items: center;
+	padding-top: 130px;
+}
+
+.stretchColumn {
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.pushLeft90 {
+	margin-left: 90px;
+}
+
+/* MENU & HOME */
+.flexCentered {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.credits {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+
+/* ANIMATED CARD LAYOUT */
+.table {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CARDS */
+.card {
+  height: 360px;
+  transition: 1.5s;
+  position: absolute;
+	display: flex;
+	flex-direction: column;
+}
+
+.card:hover {
+  height: 380px;
+  transition: .5s;
+  z-index: 9;
+  transform: rotate(0deg) !important;
+  cursor: pointer;
+}
+
+.largeCard {
+	width: 400px;
+	height: 600px;
+}
+
+/* SIN INFO LAYOUT */
+.contentLayout {
+	display: flex;
+	flex-direction: row;
+	max-width: 1000px;
+	width: 100%;
+}
+
+.sinInfo {
+	display: flex;
+	flex-direction: column;
+	padding-left: 24px;
+}
+
+app-thumnail {
+	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	width: 80%;
-	position: absolute;
-	bottom: 40px; */
+	max-width: 800px;
+	width: 100%;
+	margin-top: 32px;
+}
+
+/* HISTORY LAYOUT */
+.histContent {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	max-width: 1000px;
+	width: calc(100% - 80px);
+	padding: 0 40px;
+}
+
+/* LITURATURE LAYOUT */
+
+.litContent {
+	display: flex;
+	flex-direction: column;
+	max-width: 1000px;
+	width: calc(100% - 80px);
+	padding: 0 40px;
+}
+
+.bookDisplay {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+
+.book {
+	width: 92px;
+}
+
+@media screen and (max-width: 720px) {
+	.litContent,
+	.histContent {
+		overflow-y: scroll;
+	}
 }

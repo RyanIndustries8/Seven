@@ -1,44 +1,70 @@
+<!-- HOME SCREEN AND MENU -->
 <div #menu class="mask flexCentered" *ngIf="menu" [@clickevent]>
-  <div class="title">
     <h1>Seven</h1>
     <h2>Deadly Sins</h2>
-    <ul>
-      <li (click)="toggleSin()"><h4><a>Sins</a></h4></li>
-      <li (click)="toggleHistory()"><h4><a>History</a></h4></li>
-      <li (click)="toggleArts()"><h4><a>Inspired Arts</a></h4></li>
-    </ul>
+      <h4 (click)="toggleSin()"><a>Sins</a></h4>
+      <h4 (click)="toggleHistory()"><a>History</a></h4>
+      <h4 (click)="toggleArts()"><a>Inspired Arts</a></h4>
+  <div class="credits">
+    <h6>Art: <a class="highlightLink" target="_blank" href="https://www.deviantart.com/dahlig">Marta Dahlig</a></h6>
+    <h6>Content: <a class="highlightLink" target="_blank" href="https://en.wikipedia.org/wiki/Seven_deadly_sins">Wikipedia</a></h6>
   </div>
-  <ul class="credits">
-    <li><h6>Art: <a class="highlightLink" target="_blank" href="https://www.deviantart.com/dahlig">Marta Dahlig</a></h6></li>
-    <li><h6>Content: <a class="highlightLink" target="_blank" href="https://en.wikipedia.org/wiki/Seven_deadly_sins">Wikipedia</a></h6></li>
-  </ul>
 </div>
 
 <div>
+<!-- FIXED HEADER -->
   <header id="title">
     <h4 *ngIf="menuOpen">Seven Deadly Sins</h4>
     <div *ngIf="menuOpen" (click)="toggleMenu()"><a>MENU</a></div>
   </header>
-  <div #arts class="mask" *ngIf="arts" [@clickevent]>
-    <div class="contentContainer">
-      <h3>Inspired Arts</h3>
+
+<!-- LITURATURE CONTENT -->
+  <div #arts class="mask columnCentered" *ngIf="arts" [@clickevent]>
+    <div class="litContent" *ngFor="let info of liturature">
+      <div class="">
+        <h3>{{info.title}}</h3>
+        <p>{{info.content}}</p>
+      </div>
+      <div class="bookDisplay" *ngFor="let subpic of info['books']">
+        <div class="pushLeft90">
+          <h5>{{subpic.title}}</h5>
+          <p>{{subpic.info}}</p>
+        </div>
+        <div>
+          <img class="book" [src]="subpic.img" alt="" />
+        </div>
+      </div>
     </div>
   </div>
-  <div #history class="mask" *ngIf="history" [@clickevent]>
-    <div class="contentContainer">
-      <h3>History</h3>
-      <p>The seven deadly sins, also known as the capital vices or cardinal sins, are a classification of the most objectionable vices that were originally used in early Christian teachings to educate and instruct followers concerning (immoral) fallen man's tendency to sin. They are: lust, gluttony, greed, sloth, wrath, envy and pride. The Catholic Church divided sin into two principal categories: "venial", which are relatively minor, and could be forgiven through any sacramentals or sacraments of the church, and the more severe "capital" or mortal sin. Mortal sins destroyed the life of grace, and created the threat of eternal damnation unless either absolved through the sacrament of confession, or forgiven through perfect contrition on the part of the penitent. The Divine ComedyBeginning in the early 14th century, the popularity of the seven deadly sins as a theme among European artists of the time eventually helped to ingrain them in many areas of Christian culture and Christian consciousness in general throughout the world. One means of such ingraining was the creation of the mnemonic "SALIGIA" based on the first letters in Latin of the seven deadly sins: superbia, avaritia, luxuria, invidia, gula, ira, acedia.</p>
-      <p>The Seven Deadly Sins never occur as a formal list in the Bible. Some people say they can all  The Divine Comedybe found in Matthew's Gospel (chapters 5 through 7), but they are not in a simple list there. Others submit Proverbs 6:16-19, but this is a different list, covering pride, lies, murder, evil plans, swiftness in sin, lies again, causing conflict. Clearly not the same. These sins were identified as a group around the same time as the Bible was being translated into a single language. Rather than these sins being identified in a single place in the Bible, they are found all through it, from Genesis to Revelation. The letters of the New Testament mention all of these, and many others as well. The Catechism has many Scriptural references in the section that lists the "Seven Deadly Sins." It is well to remember that the Scriptures come from the Jewish and Christian Churches, not the other way around. In both cases, faith preceded the writing.</p>
+
+<!-- HISTORY CONTENT -->
+  <div #history class="mask columnCentered" *ngIf="history" [@clickevent]>
+    <div class="histContent" *ngFor="let info of his">
+      <div class="stretchColumn">
+        <img *ngFor="let sublist of info['pics']" [src]="sublist.img" alt="" />
+      </div>
+      <div class="pushLeft90">
+        <h3>{{info.title}}</h3>
+        <div *ngFor="let mylist of info['paras']">
+          <p>{{mylist.content}}</p>
+        </div>
+      </div>
     </div>
   </div>
+
+<!-- CARDS -->
   <div class="table">
-    <div class="" *ngIf="sins">
+<!-- CARD CONTENT -->
+    <div *ngIf="sins">
       <app-sins></app-sins>
     </div>
-    <div class="cardsLayedOut" *ngFor="let jo of cards">
-      <a [routerLink]="['/sins', sins.id]"><img class="card" [ngStyle]="rotateCards()" *ngFor="let sublist of jo.content" [src]="sublist.card" /></a>
-
+<!-- ALL CARDS -->
+    <div class="cardsLayedOut">
+      <a *ngFor="let sin of modelwork" [routerLink]="['/sin', sin.id]">
+        <img class="card" [ngStyle]="rotateCards()" *ngFor="let sublist of sin.content" [src]="sublist.card" />
+      </a>
     </div>
+
   </div>
 
 </div>

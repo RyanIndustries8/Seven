@@ -1,0 +1,3 @@
+<div *ngFor="let sin of modelwork">
+  <a [routerLink]="['/sin', sin.id]" *ngFor="let sublist of sin.content"><img class="icon" [src]="sublist.icon" /></a>
+</div>
