@@ -9,10 +9,6 @@ const routes: Routes = [
     component: CardComponent
   },
   {
-    path: 'sin/:id',
-    component: SinsComponent
-  },
-  {
     path: '',
     redirectTo: '/cards',
     pathMatch: 'full'

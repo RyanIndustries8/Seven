@@ -25,15 +25,16 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 
 export class CardComponent implements OnInit {
+  hideme = [];
   menu = true;
   arts = false;
   menuOpen = false;
   history = false;
   sins = false;
 
-  modelwork: any;
   his: any;
   liturature: any;
+  cardwork: any;
 
   constructor( private route: ActivatedRoute, private router: Router, private http: HttpClient, public sanitizer: DomSanitizer ) {
     this.sanitizer = sanitizer;
@@ -44,20 +45,20 @@ export class CardComponent implements OnInit {
     // Cards
     this.http.get<any>('./assets/json/cards.json').subscribe(
       data => {
-        this.modelwork = data;
-    })
+        this.cardwork = data;
+    });
 
     // History
     this.http.get<any>('./assets/json/history.json').subscribe(
       data => {
         this.his = data;
-    })
+    });
 
     // Liturature
     this.http.get<any>('./assets/json/lit.json').subscribe(
       data => {
         this.liturature = data;
-    })
+    });
 
   }
 
@@ -96,11 +97,6 @@ export class CardComponent implements OnInit {
     this.sins = false;
   }
 
-  toggleSin() {
-    this.menuOpen = true;
-    this.menu = false;
-  }
-
   toggleHistory() {
     this.menuOpen = true;
     this.menu = false;
@@ -113,8 +109,14 @@ export class CardComponent implements OnInit {
     this.arts = true;
   }
 
-  viewSin() {
+  toggleSin(sin) {
+    this.menuOpen = true;
+    this.menu = false;
     this.sins = true;
+    Object.keys(this.hideme).forEach(h => {
+    this.hideme[h] = false;
+    });
+    this.hideme[sin.id] = true;
   }
 
 }

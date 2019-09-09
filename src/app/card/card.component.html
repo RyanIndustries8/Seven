@@ -53,16 +53,24 @@
   </div>
 
 <!-- CARDS -->
-  <div class="table">
+  <div class="table" *ngFor="let sin of cardwork">
 <!-- CARD CONTENT -->
-    <div *ngIf="sins">
-      <app-sins></app-sins>
-    </div>
-<!-- ALL CARDS -->
     <div class="cardsLayedOut">
-      <a *ngFor="let sin of modelwork" [routerLink]="['/sin', sin.id]">
+      <a href="#" (click)="toggleSin()">
         <img class="card" [ngStyle]="rotateCards()" *ngFor="let sublist of sin.content" [src]="sublist.card" />
       </a>
+    </div>
+    <div [hidden]="sins" #sins>
+      <div *ngFor="let sin of cardwork" class="mask columnCentered">
+        <div class="contentLayout" *ngFor="let sublist of sin.content">
+          <img class="largeCard" [src]="sublist.card" />
+          <div class="sinInfo">
+            <h3>{{sublist.sin}}</h3>
+            <p>{{sublist.info}}</p>
+          </div>
+        </div>
+        <app-thumnail></app-thumnail>
+      </div>
     </div>
 
   </div>
